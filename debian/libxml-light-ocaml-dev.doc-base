@@ -1,0 +1,9 @@
+Document: xml-light
+Title: OCaml xml-light Manual
+Author: Nicolas Cannasse
+Abstract: Description of all function provided by xml-light.
+Section: Apps/Programming
+
+Format: HTML
+Index: /usr/share/doc/libxml-light-ocaml-dev/html/index.html
+Files: /usr/share/doc/libxml-light-ocaml-dev/html/*.html
