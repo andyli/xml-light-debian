@@ -1,0 +1,11 @@
+xml-light for Debian
+--------------------
+
+To use at the toplevel:
+
+#directory "+xml-light";;
+#load "xml-light.cma";;
+#open Xml;;
+#open Dtd;;
+
+ -- YANG Shouxun <yang.shx@fltrp.com>, Mon Sep 26 15:27:45 2005
