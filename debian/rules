@@ -6,6 +6,10 @@ PACKAGE = xml-light
 OCAML_LIBDIR=`ocamlc -where`
 VERSION=$(shell dpkg-parsechangelog | \
 	awk "/Version: .*/ { gsub(\"Version: \",\"\"); gsub(\"-.*\",\"\"); print; }")
+OCAMLABI=$(shell ocamlc -version)
+
+debian/control: debian/control.in
+	sed -e 's%#OCamlABI#%$(OCAMLABI)%' $@.in >$@
 
 build: build-stamp
 build-stamp: patch-stamp
@@ -60,7 +64,7 @@ binary-arch: build install
 	dh_fixperms -a
 	dh_installdeb -a
 	dh_shlibdeps -a 
-	dh_gencontrol -a
+	dh_gencontrol -a -- -VF:OCamlABI="$(OCAMLABI)"
 	dh_md5sums -a 
 	dh_builddeb -a
 
