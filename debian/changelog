@@ -1,3 +1,11 @@
+xml-light (2.2-4) unstable; urgency=low
+
+  * Change my email address to gildor@debian.org,
+  * Made debian/control a PHONY target,
+  * Upgrade standards version to 3.7.2 (no change),
+
+ -- Sylvain Le Gall <gildor@debian.org>  Thu, 15 Jun 2006 09:05:21 +0200
+
 xml-light (2.2-3) unstable; urgency=low
 
   * Rebuild for OCaml 3.09.1
