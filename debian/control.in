@@ -2,7 +2,7 @@ Source: xml-light
 Section: libdevel
 Priority: optional
 Maintainer: Sylvain Le Gall <gildor@debian.org>
-Build-Depends: debhelper (>> 4.0.0), ocaml-nox (>= #OCamlABI#), dpatch
+Build-Depends: @cdbs@, ocaml-nox (>= 3.09.2)
 Standards-Version: 3.7.2
 XS-X-Vcs-Svn: svn://svn.debian.org/svn/pkg-ocaml-maint/trunk/packages/xml-light
 

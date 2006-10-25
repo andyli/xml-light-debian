@@ -1,3 +1,12 @@
+xml-light (2.2-5) unstable; urgency=low
+
+  * Use CDBS for debian/rules,
+  * Upgrade debhelper debian/compat to 5,
+  * Use patch 03_cflags, to remove CFLAGS use in the
+    Makefile (CFLAGS has a particular meaning).
+
+ -- Sylvain Le Gall <gildor@debian.org>  Thu, 26 Oct 2006 00:43:02 +0200
+
 xml-light (2.2-4) unstable; urgency=low
 
   * Change my email address to gildor@debian.org,
