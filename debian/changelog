@@ -1,3 +1,9 @@
+xml-light (2.2-6) unstable; urgency=low
+
+  * Remove trace call (Closes: #382828, #383255)
+
+ -- Sylvain Le Gall <gildor@debian.org>  Thu, 26 Oct 2006 23:26:25 +0200
+
 xml-light (2.2-5) unstable; urgency=low
 
   * Use CDBS for debian/rules,
