@@ -1,3 +1,10 @@
+xml-light (2.2-7) UNRELEASED; urgency=low
+
+  * Upgrade debian/watch version to 3,
+  * Use "sed -i" to process debian/META.xml-light,
+
+ -- Sylvain Le Gall <gildor@debian.org>  Sun,  5 Nov 2006 16:23:33 +0100
+
 xml-light (2.2-6) unstable; urgency=low
 
   * Remove trace call (Closes: #382828, #383255)

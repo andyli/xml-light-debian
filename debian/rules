@@ -23,34 +23,7 @@
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/rules/dpatch.mk
 include /usr/share/cdbs/1/class/makefile.mk
-
-# Taken from ocaml.mk
-OCAMLABI                = $(shell ocamlc -version)
-DEB_DH_GENCONTROL_ARGS += -- -VF:OCamlABI="$(OCAMLABI)"
-OCAML_HAVE_OCAMLOPT    := $(shell if test -x /usr/bin/ocamlopt ; then echo "yes" ; else echo "no" ; fi)
-OCAML_STDLIB_DIR       := $(shell /usr/bin/ocamlc -where)
-
-OFILES := $(filter-out debian/control,$(patsubst %.in,%,$(wildcard debian/*.in)))
-
-ocamlinit:
-	echo -n > $(CURDIR)/ocamlinit-stamp; \
-	for f in $(OFILES); do \
-	  sed -e 's/@OCamlStdlibDir@/$(subst /,\/,$(OCAML_STDLIB_DIR))/g' \
-	  $$f.in > $$f; \
-	  echo $$f >> $(CURDIR)/ocamlinit-stamp; \
-	done
-
-clean::
-	if [ -e $(CURDIR)/ocamlinit-stamp ]; then \
-	  for f in `cat $(CURDIR)/ocamlinit-stamp`; do \
-	    if [ -e $$f.in ] && [ -e $$f ]; then \
-	      $(RM) $$f; \
-	    fi; \
-	  done; \
-	  $(RM) $(CURDIR)/ocamlinit-stamp; \
-	fi
-
-common-configure-indep common-configure-arch:: ocamlinit
+include /usr/share/cdbs/1/class/ocaml.mk
 
 PACKAGE_DEV := libxml-light-ocaml-dev
 DESTDIR_DEV := $(CURDIR)/debian/$(PACKAGE_DEV)
@@ -69,12 +42,16 @@ DEB_MAKE_INSTALL_TARGET  += installopt
 endif
 DEB_MAKE_INSTALL_TARGET  += INSTALLDIR="$(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light"
 
+CDBS_BUILD_DEPENDS := $(subst ocaml-nox,ocaml-nox (>= 3.09.2-7),$(CDBS_BUILD_DEPENDS))
+
 clean::
-	-$(RM) -r doc
-	-$(RM) xml-light.a
-	-$(RM) debian/META.xml-light
+	-$(RM) -r $(CURDIR)/doc
+	-$(RM) $(CURDIR)/xml-light.a
+	-$(RM) $(CURDIR)/debian/META.xml-light
+	-$(RM) $(CURDIR)/debian/libxml-light-ocaml-dev.dirs
+	-$(RM) $(CURDIR)/debian/libxml-light-ocaml-dev.install
               
 install/libxml-light-ocaml-dev::
 	VERSION=$(DEB_NOEPOCH_VERSION); \
 	VERSION=$${VERSION%%-*}; \
-	sed -e "s/@VERSION@/$$VERSION/" debian/META.xml-light.in > debian/META.xml-light
+	sed -i "s/@VERSION@/$$VERSION/g" $(CURDIR)/debian/META.xml-light
