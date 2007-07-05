@@ -2,8 +2,9 @@ xml-light (2.2-7) UNRELEASED; urgency=low
 
   * Upgrade debian/watch version to 3,
   * Use "sed -i" to process debian/META.xml-light,
+  * Change email address to gildor@debian.org everywhere
 
- -- Sylvain Le Gall <gildor@debian.org>  Sun,  5 Nov 2006 16:23:33 +0100
+ -- Sylvain Le Gall <gildor@debian.org>  Thu, 21 Jun 2007 23:13:07 +0100
 
 xml-light (2.2-6) unstable; urgency=low
 
