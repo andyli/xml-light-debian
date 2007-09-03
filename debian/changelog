@@ -1,3 +1,10 @@
+xml-light (2.2-8) unstable; urgency=low
+
+  * Build for ocaml 3.10.0
+  * Use CDBS generated documentation rather than upstream doc
+
+ -- Sylvain Le Gall <gildor@debian.org>  Tue, 04 Sep 2007 01:23:52 +0200
+
 xml-light (2.2-7) experimental; urgency=low
 
   * Upgrade debian/watch version to 3,

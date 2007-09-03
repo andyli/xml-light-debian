@@ -34,7 +34,6 @@ DEB_MAKE_BUILD_TARGET    := all
 ifeq ($(OCAML_HAVE_OCAMLOPT),yes)
 DEB_MAKE_BUILD_TARGET    += opt
 endif
-DEB_MAKE_BUILD_TARGET    += doc
 
 DEB_MAKE_INSTALL_TARGET  := install 
 ifeq ($(OCAML_HAVE_OCAMLOPT),yes)
@@ -42,10 +41,11 @@ DEB_MAKE_INSTALL_TARGET  += installopt
 endif
 DEB_MAKE_INSTALL_TARGET  += INSTALLDIR="$(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light"
 
-CDBS_BUILD_DEPENDS := $(subst ocaml-nox,ocaml-nox (>= 3.09.2-7),$(CDBS_BUILD_DEPENDS))
+CDBS_BUILD_DEPENDS := $(subst ocaml-nox,ocaml-nox (>= 3.10.0-8),$(CDBS_BUILD_DEPENDS))
+
+OCAML_OCAMLDOC_PACKAGES := libxml-light-ocaml-dev
 
 clean::
-	-$(RM) -r $(CURDIR)/doc
 	-$(RM) $(CURDIR)/xml-light.a
 	-$(RM) $(CURDIR)/debian/META.xml-light
 	-$(RM) $(CURDIR)/debian/libxml-light-ocaml-dev.dirs
