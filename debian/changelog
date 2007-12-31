@@ -1,6 +1,10 @@
 xml-light (2.2-9) UNRELEASED; urgency=low
 
+  [ Sylvain Le Gall ]
   * NOT RELEASED YET
+
+  [ Stefano Zacchiroli ]
+  * fix vcs-svn field to point just above the debian/ dir
 
  -- Sylvain Le Gall <gildor@debian.org>  Tue, 04 Sep 2007 01:29:48 +0200
 
