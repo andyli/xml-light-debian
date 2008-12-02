@@ -1,12 +1,15 @@
-xml-light (2.2-9) UNRELEASED; urgency=low
-
-  [ Sylvain Le Gall ]
-  * NOT RELEASED YET
+xml-light (2.2-9) experimental; urgency=low
 
   [ Stefano Zacchiroli ]
   * fix vcs-svn field to point just above the debian/ dir
 
- -- Sylvain Le Gall <gildor@debian.org>  Tue, 04 Sep 2007 01:29:48 +0200
+  [ Romain Beauxis ]
+  * Prepared upload to experimental against ocaml 3.11.
+  * Versioned ocaml related build-dep to avoid confusion.
+  * Added build-dep on dh-ocaml.
+  * Bumped standards version (no change needed). 
+
+ -- Romain Beauxis <toots@rastageeks.org>  Tue, 02 Dec 2008 19:28:59 +0100
 
 xml-light (2.2-8) unstable; urgency=low
 
