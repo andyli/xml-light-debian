@@ -1,3 +1,9 @@
+xml-light (2.2-11) UNRELEASED; urgency=low
+
+  * Switch packaging to git
+
+ -- Samuel Mimram <smimram@debian.org>  Fri, 27 Feb 2009 00:00:04 +0100
+
 xml-light (2.2-10) experimental; urgency=low
 
   * Upload to experimental to build against released ocaml 3.11.
