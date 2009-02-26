@@ -23,7 +23,7 @@
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/rules/dpatch.mk
 include /usr/share/cdbs/1/class/makefile.mk
-include /usr/share/cdbs/1/class/ocaml.mk
+include /usr/share/cdbs/1/rules/ocaml.mk
 
 PACKAGE_DEV := libxml-light-ocaml-dev
 DESTDIR_DEV := $(CURDIR)/debian/$(PACKAGE_DEV)
@@ -35,7 +35,7 @@ ifeq ($(OCAML_HAVE_OCAMLOPT),yes)
 DEB_MAKE_BUILD_TARGET    += opt
 endif
 
-DEB_MAKE_INSTALL_TARGET  := install 
+DEB_MAKE_INSTALL_TARGET  := install
 ifeq ($(OCAML_HAVE_OCAMLOPT),yes)
 DEB_MAKE_INSTALL_TARGET  += installopt
 endif

@@ -1,8 +1,10 @@
 xml-light (2.2-11) UNRELEASED; urgency=low
 
-  * Switch packaging to git
+  * Rebuild with OCaml 3.11.
+  * Switch packaging to git.
+  * Update compat to 7.
 
- -- Samuel Mimram <smimram@debian.org>  Fri, 27 Feb 2009 00:00:04 +0100
+ -- Samuel Mimram <smimram@debian.org>  Fri, 27 Feb 2009 00:01:10 +0100
 
 xml-light (2.2-10) experimental; urgency=low
 
