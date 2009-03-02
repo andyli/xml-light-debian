@@ -1,18 +1,23 @@
-This package was debianized by Sylvain Le Gall
-<gildor@debian.org>  Mon, 10 Oct 2005 23:45:16 +02005.
+Format-Specification: http://wiki.debian.org/Proposals/CopyrightFormat
+Upstream-Author: Nicolas Cannasse <ncannasse@motion-twin.com>
+Packaged-By: Sylvain Le Gall <gildor@debian.org>
+Packaged-Date: Mon, 10 Oct 2005 23:45:16 +02005
+Original-Source-Location: http://tech.motion-twin.com/zip/
 
-It was downloaded from :
-http://tech.motion-twin.com/xmllight.html
-http://tech.motion-twin.com/zip/
+Files: *
+Copyright: © 2003-2005 Nicolas Cannasse <ncannasse@motion-twin.com>
+           © 2003-2005 Motion-Twin
+License: LGPL-2.1+
 
-Upstream Author: 
-Nicolas Cannasse (ncannasse@motion-twin.com)
+Xml-light is distributed under the terms the LGPL v2.1 licence, which can be
+found in the /usr/share/common-licenses/LGPL-2.1 file on debian systems.
 
-Copyright:
-(c)2003-2005 Nicolas Cannasse (ncannasse@motion-twin.com)
-(c)2003-2005 Motion-Twin
-Some parts of this code source has an additionnal copyright to Jacques Garrigue
+Files: xmlParser.ml
+Copyright: © 2003 Nicolas Cannasse <ncannasse@motion-twin.com>
+           © 2003 Jacques Garrigue
+License: LGPL-2.1+
 
-Xml-light is distributed under the terms the LGPL licence, which can be
-found in the /usr/share/common-licenses/LGPL file on debian systems.
+Files: debian/*
+Copyright: © 2005-2008 Sylvain Le Gall <gildor@debian.org>
+License: GPL-2+
 

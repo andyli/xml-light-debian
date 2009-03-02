@@ -1,10 +1,18 @@
-xml-light (2.2-11) UNRELEASED; urgency=low
+xml-light (2.2-11) unstable; urgency=low
 
+  [ Samuel Mimram ]
   * Rebuild with OCaml 3.11.
   * Switch packaging to git.
   * Update compat to 7.
 
- -- Samuel Mimram <smimram@debian.org>  Fri, 27 Feb 2009 00:01:10 +0100
+  [ Sylvain Le Gall ]
+  * Remove useless doc/variable for generating debian/control from
+    control.in
+  * Use debian/clean
+  * Update debian/copyright using CopyrightFormat 
+  * Add Homepage field
+
+ -- Sylvain Le Gall <gildor@debian.org>  Mon, 02 Mar 2009 22:54:48 +0100
 
 xml-light (2.2-10) experimental; urgency=low
 

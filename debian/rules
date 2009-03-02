@@ -17,9 +17,6 @@
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston,
 # MA 02110-1301, USA.
 
-# Generate debian/control using
-# fakeroot debian/rules debian/control DEB_AUTO_UPDATE_DEBIAN_CONTROL:=yes
-
 include /usr/share/cdbs/1/rules/debhelper.mk
 include /usr/share/cdbs/1/rules/dpatch.mk
 include /usr/share/cdbs/1/class/makefile.mk
@@ -39,19 +36,14 @@ DEB_MAKE_INSTALL_TARGET  := install
 ifeq ($(OCAML_HAVE_OCAMLOPT),yes)
 DEB_MAKE_INSTALL_TARGET  += installopt
 endif
-DEB_MAKE_INSTALL_TARGET  += INSTALLDIR="$(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light"
-
-CDBS_BUILD_DEPENDS := $(subst ocaml-nox,ocaml-nox (>= 3.10.0-8),$(CDBS_BUILD_DEPENDS))
+DEB_MAKE_INSTALL_TARGET  += INSTALLDIR='$(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light'
 
 OCAML_OCAMLDOC_PACKAGES := libxml-light-ocaml-dev
 
 clean::
-	-$(RM) $(CURDIR)/xml-light.a
-	-$(RM) $(CURDIR)/debian/META.xml-light
-	-$(RM) $(CURDIR)/debian/libxml-light-ocaml-dev.dirs
-	-$(RM) $(CURDIR)/debian/libxml-light-ocaml-dev.install
+	-$(RM) -r '$(CURDIR)/doc'
               
 install/libxml-light-ocaml-dev::
 	VERSION=$(DEB_NOEPOCH_VERSION); \
 	VERSION=$${VERSION%%-*}; \
-	sed -i "s/@VERSION@/$$VERSION/g" $(CURDIR)/debian/META.xml-light
+	sed -i "s/@VERSION@/$$VERSION/g" '$(CURDIR)/debian/META.xml-light'
