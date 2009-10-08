@@ -5,6 +5,7 @@ xml-light (2.2-12) UNRELEASED; urgency=low
   * Set maintainer to debian-ocaml-maint
 
   [ Mehdi Dogguy ]
+  * Add myself to uploaders
   * Set the section to ocaml
 
  -- Mehdi Dogguy <mehdi@debian.org>  Thu, 08 Oct 2009 23:55:08 +0200
