@@ -8,6 +8,7 @@ xml-light (2.2-12) UNRELEASED; urgency=low
   * Add myself to uploaders
   * Set the section to ocaml
   * Bump standards version to 3.8.3
+  * Reorder included files in debian/rules to workaround a CDBS bug
 
  -- Mehdi Dogguy <mehdi@debian.org>  Thu, 08 Oct 2009 23:55:08 +0200
 
