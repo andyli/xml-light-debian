@@ -1,9 +1,13 @@
 xml-light (2.2-12) UNRELEASED; urgency=low
 
+  [ Sylvain Le Gall ]
   * NOT RELEASED YET
   * Set maintainer to debian-ocaml-maint
 
- -- Sylvain Le Gall <gildor@debian.org>  Tue, 03 Mar 2009 00:15:28 +0100
+  [ Mehdi Dogguy ]
+  * Set the section to ocaml
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Thu, 08 Oct 2009 23:55:08 +0200
 
 xml-light (2.2-11) unstable; urgency=low
 

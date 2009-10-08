@@ -1,5 +1,5 @@
 Source: xml-light
-Section: libdevel
+Section: ocaml
 Priority: optional
 Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
 Uploaders: Sylvain Le Gall <gildor@debian.org>
