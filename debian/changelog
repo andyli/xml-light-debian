@@ -1,7 +1,6 @@
-xml-light (2.2-12) UNRELEASED; urgency=low
+xml-light (2.2-12) unstable; urgency=low
 
   [ Sylvain Le Gall ]
-  * NOT RELEASED YET
   * Set maintainer to debian-ocaml-maint
 
   [ Mehdi Dogguy ]
