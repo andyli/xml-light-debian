@@ -38,8 +38,6 @@ DEB_MAKE_INSTALL_TARGET  += installopt
 endif
 DEB_MAKE_INSTALL_TARGET  += INSTALLDIR='$(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light'
 
-OCAML_OCAMLDOC_PACKAGES := libxml-light-ocaml-dev
-
 clean::
 	-$(RM) -r '$(CURDIR)/doc'
               

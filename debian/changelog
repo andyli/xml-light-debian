@@ -7,6 +7,8 @@ xml-light (2.2-12) UNRELEASED; urgency=low
   [ Mehdi Dogguy ]
   * Add myself to uploaders
   * Set the section to ocaml
+  * Use new features of dh-ocaml 0.9
+    - Generate the documentation using dh_ocamldoc
   * Bump standards version to 3.8.3
   * Reorder included files in debian/rules to workaround a CDBS bug
 
