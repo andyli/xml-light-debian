@@ -1,3 +1,10 @@
+xml-light (2.2-13) unstable; urgency=low
+
+  * Provide a .cmxs plugin in libxml-light-ocaml-dev (Closes: #647299).
+    Thanks to Benjamin Sigonneau for the patch.
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Wed, 04 Jan 2012 17:42:38 +0100
+
 xml-light (2.2-12) unstable; urgency=low
 
   [ Sylvain Le Gall ]
