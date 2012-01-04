@@ -1,0 +1,28 @@
+--- a/Makefile
++++ b/Makefile
+@@ -9,13 +9,13 @@
+ 
+ all: xml-light.cma test.exe doc
+ 
+-opt: xml-light.cmxa test_opt.exe
++opt: xml-light.cmxs test_opt.exe
+ 
+ install: all 
+ 	cp xml-light.cma xml.mli xmlParser.mli dtd.mli xml.cmi xmlParser.cmi dtd.cmi  $(INSTALLDIR)
+ 
+ installopt: opt all 
+-	cp xml-light.a xml-light.cmxa xml.cmx dtd.cmx xmlParser.cmx $(INSTALLDIR)
++	cp xml-light.a xml-light.cmxa xml-light.cmxs xml.cmx dtd.cmx xmlParser.cmx $(INSTALLDIR)
+ 
+ doc:
+ 	mkdir doc
+@@ -33,6 +33,9 @@
+ xml-light.cmxa: xml_parser.cmx xml_lexer.cmx dtd.cmx xmlParser.cmx xml.cmx 
+ 	ocamlopt -o xml-light.cmxa $(XML_LIGHT_OCAML_LFLAGS) $(LIBS) xml_parser.cmx xml_lexer.cmx dtd.cmx xmlParser.cmx xml.cmx
+ 
++xml-light.cmxs: xml-light.cmxa
++	ocamlopt -o xml-light.cmxs -shared -linkall xml-light.cmxa
++
+ dtd.cmo: xml.cmi xml_lexer.cmi dtd.cmi
+ 
+ dtd.cmx: xml.cmi xml_lexer.cmi dtd.cmi
