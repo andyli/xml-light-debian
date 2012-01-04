@@ -1,4 +1,4 @@
-xml-light (2.2-13) unstable; urgency=low
+xml-light (2.2-13) UNRELEASE; urgency=low
 
   * Provide a .cmxs plugin in libxml-light-ocaml-dev (Closes: #647299).
     Thanks to Benjamin Sigonneau for the patch.
