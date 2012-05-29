@@ -1,4 +1,4 @@
-xml-light (2.2-13) UNRELEASE; urgency=low
+xml-light (2.2-13) unstable; urgency=low
 
   * Provide a .cmxs plugin in libxml-light-ocaml-dev (Closes: #647299).
     Thanks to Benjamin Sigonneau for the patch.
@@ -10,7 +10,7 @@ xml-light (2.2-13) UNRELEASE; urgency=low
     - libxml-light-ocaml Breaks/Replaces the old binary package
       libxml-light-ocaml-dev (<< 2.2-13).
 
- -- Mehdi Dogguy <mehdi@debian.org>  Wed, 04 Jan 2012 17:57:31 +0100
+ -- Mehdi Dogguy <mehdi@debian.org>  Tue, 29 May 2012 15:17:26 +0200
 
 xml-light (2.2-12) unstable; urgency=low
 
