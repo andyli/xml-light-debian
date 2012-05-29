@@ -6,6 +6,9 @@ xml-light (2.2-13) UNRELEASE; urgency=low
     - Fixes build-depends-on-obsolete-package (dpatch)
     - Fixes debian-rules-uses-deprecated-makefile (dpatch.mk)
   * Bump Standards-Version to 3.9.2, no changes needed.
+  * Add libxml-light-ocaml, needed to ship .cmxs files.
+    - libxml-light-ocaml Breaks/Replaces the old binary package
+      libxml-light-ocaml-dev (<< 2.2-13).
 
  -- Mehdi Dogguy <mehdi@debian.org>  Wed, 04 Jan 2012 17:57:31 +0100
 

@@ -23,7 +23,28 @@ Depends:
  ${misc:Depends}
 Provides:
  ${ocaml:Provides}
-Description: mininal XML parser and printer for OCaml
+Description: mininal XML parser and printer for OCaml (development package)
+ This is a XML parser and printer, designed to help parsing basic XML document
+ into OCaml data structures and printing it back to a XML document.
+ .
+ It also supports DTD.
+ .
+ You can find more information about xml-light at
+ http://tech.motion-twin.com/xmllight.html
+
+Package: libxml-light-ocaml
+Architecture: any
+Depends:
+ ${ocaml:Depends},
+ ${shlibs:Depends},
+ ${misc:Depends}
+Provides:
+ ${ocaml:Provides}
+Breaks:
+ libxml-light-ocaml-dev (<< 2.2-13)
+Replaces:
+ libxml-light-ocaml-dev (<< 2.2-13)
+Description: mininal XML parser and printer for OCaml (runtime package)
  This is a XML parser and printer, designed to help parsing basic XML document
  into OCaml data structures and printing it back to a XML document.
  .

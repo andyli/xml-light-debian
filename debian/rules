@@ -23,6 +23,7 @@ include /usr/share/cdbs/1/rules/ocaml.mk
 
 PACKAGE_DEV := libxml-light-ocaml-dev
 DESTDIR_DEV := $(CURDIR)/debian/$(PACKAGE_DEV)
+DESTDIR_RUN := $(CURDIR)/debian/libxml-light-ocaml
 
 DEB_MAKE_CLEAN_TARGET    := clean
 
@@ -40,7 +41,11 @@ DEB_MAKE_INSTALL_TARGET  += INSTALLDIR='$(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-l
 clean::
 	-$(RM) -r '$(CURDIR)/doc'
               
-install/libxml-light-ocaml-dev::
+install/libxml-light-ocaml:: install/libxml-light-ocaml-dev
 	VERSION=$(DEB_NOEPOCH_VERSION); \
 	VERSION=$${VERSION%%-*}; \
 	sed -i "s/@VERSION@/$$VERSION/g" '$(CURDIR)/debian/META.xml-light'
+
+	mv $(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light/xml-light.cma \
+	   $(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light/xml-light.cmxs \
+	$(DESTDIR_RUN)/$(OCAML_STDLIB_DIR)/xml-light
