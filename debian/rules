@@ -47,5 +47,10 @@ install/libxml-light-ocaml:: install/libxml-light-ocaml-dev
 	sed -i "s/@VERSION@/$$VERSION/g" '$(CURDIR)/debian/META.xml-light'
 
 	mv $(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light/xml-light.cma \
-	   $(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light/xml-light.cmxs \
-	$(DESTDIR_RUN)/$(OCAML_STDLIB_DIR)/xml-light
+		$(DESTDIR_RUN)/$(OCAML_STDLIB_DIR)/xml-light
+ifeq ($(OCAML_NATDYNLINK),yes)
+	mv $(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light/xml-light.cmxs \
+		$(DESTDIR_RUN)/$(OCAML_STDLIB_DIR)/xml-light
+else
+	-$(RM) $(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light/xml-light.cmxs
+endif

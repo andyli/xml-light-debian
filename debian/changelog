@@ -1,3 +1,10 @@
+xml-light (2.2-14) UNRELEASED; urgency=low
+
+  * Do not try to install the .cmxs plugin on architectures where
+    natdynlink is not available.
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Thu, 07 Jun 2012 13:51:49 +0200
+
 xml-light (2.2-13) unstable; urgency=low
 
   * Provide a .cmxs plugin in libxml-light-ocaml-dev (Closes: #647299).
@@ -38,7 +45,7 @@ xml-light (2.2-11) unstable; urgency=low
   * Remove useless doc/variable for generating debian/control from
     control.in
   * Use debian/clean
-  * Update debian/copyright using CopyrightFormat 
+  * Update debian/copyright using CopyrightFormat
   * Add Homepage field
 
  -- Sylvain Le Gall <gildor@debian.org>  Mon, 02 Mar 2009 22:54:48 +0100
