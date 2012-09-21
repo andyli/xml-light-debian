@@ -3,7 +3,6 @@ Section: ocaml
 Priority: optional
 Maintainer: Debian OCaml Maintainers <debian-ocaml-maint@lists.debian.org>
 Uploaders:
- Sylvain Le Gall <gildor@debian.org>,
  Mehdi Dogguy <mehdi@debian.org>
 Build-Depends:
  cdbs (>= 0.4.23-1.1),

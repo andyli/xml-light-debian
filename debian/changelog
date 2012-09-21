@@ -1,3 +1,9 @@
+xml-light (2.2-15) UNRELEASED; urgency=low
+
+  * Remove Sylvain Le Gall from uploaders
+
+ -- Sylvain Le Gall <gildor@debian.org>  Fri, 21 Sep 2012 01:25:47 +0000
+
 xml-light (2.2-14) unstable; urgency=low
 
   * Do not try to install the .cmxs plugin on architectures where
