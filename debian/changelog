@@ -1,8 +1,13 @@
 xml-light (2.2-15) UNRELEASED; urgency=low
 
+  [ Sylvain Le Gall ]
   * Remove Sylvain Le Gall from uploaders
 
- -- Sylvain Le Gall <gildor@debian.org>  Fri, 21 Sep 2012 01:25:47 +0000
+  [ Mehdi Dogguy ]
+  * Fix CVE-2012-3514 (Closes: #685584).
+    - add 06_CVE-2012-3514.diff
+
+ -- Mehdi Dogguy <mehdi@debian.org>  Mon, 01 Oct 2012 14:49:49 +0200
 
 xml-light (2.2-14) unstable; urgency=low
 
