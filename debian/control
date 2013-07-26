@@ -10,8 +10,8 @@ Build-Depends:
  debhelper (>= 7.0.50~),
  dh-ocaml (>= 0.9)
 Standards-Version: 3.9.2
-Vcs-Git: git://git.debian.org/git/pkg-ocaml-maint/packages/xml-light.git
-Vcs-Browser: http://git.debian.org/?p=pkg-ocaml-maint/packages/xml-light.git
+Vcs-Git: git://anonscm.debian.org/pkg-ocaml-maint/packages/xml-light.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-ocaml-maint/packages/xml-light.git
 Homepage: http://tech.motion-twin.com/xmllight.html
 
 Package: libxml-light-ocaml-dev
