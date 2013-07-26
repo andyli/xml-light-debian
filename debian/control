@@ -6,7 +6,7 @@ Uploaders:
  Mehdi Dogguy <mehdi@debian.org>
 Build-Depends:
  cdbs (>= 0.4.23-1.1),
- ocaml-nox (>= 3.11),
+ ocaml-nox (>= 4),
  debhelper (>= 7.0.50~),
  dh-ocaml (>= 0.9)
 Standards-Version: 3.9.2
