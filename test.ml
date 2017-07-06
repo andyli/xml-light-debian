@@ -7,6 +7,9 @@
  * License as published by the Free Software Foundation; either
  * version 2.1 of the License, or (at your option) any later version.
  *
+ * This library has the special exception on linking described in file
+ * README.
+ *
  * This library is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
@@ -14,7 +17,8 @@
  *
  * You should have received a copy of the GNU Lesser General Public
  * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+ * MA 02110-1301 USA
  *)
 
 open Xml
@@ -39,15 +43,15 @@ try
 				print_endline "Parsing...";
 				print_endline (Xml.to_string_fmt x);
 			with
-				| Xml.Error msg as e ->
+				| Xml.Error msg ->
 					Printf.printf "Xml error : %s\n" (Xml.error msg)
-				| Dtd.Parse_error msg as e ->
+				| Dtd.Parse_error msg ->
 					Printf.printf "Dtd parse error : %s\n" (Dtd.parse_error msg)
-				| Dtd.Check_error msg as e ->
+				| Dtd.Check_error msg ->
 					Printf.printf "Dtd check error : %s\n" (Dtd.check_error msg)
-				| Dtd.Prove_error msg as e ->
+				| Dtd.Prove_error msg ->
 					Printf.printf "Dtd prove error : %s\n" (Dtd.prove_error msg))
-		| s -> 
+		| s ->
 			buf := !buf ^ s ^ "\n"
 	done
 with
