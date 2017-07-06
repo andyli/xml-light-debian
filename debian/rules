@@ -32,7 +32,7 @@ ifeq ($(OCAML_HAVE_OCAMLOPT),yes)
 DEB_MAKE_BUILD_TARGET    += opt
 endif
 
-DEB_MAKE_INSTALL_TARGET  := install
+DEB_MAKE_INSTALL_TARGET  := installbyte
 ifeq ($(OCAML_HAVE_OCAMLOPT),yes)
 DEB_MAKE_INSTALL_TARGET  += installopt
 endif
@@ -44,7 +44,8 @@ clean::
 install/libxml-light-ocaml:: install/libxml-light-ocaml-dev
 	VERSION=$(DEB_NOEPOCH_VERSION); \
 	VERSION=$${VERSION%%-*}; \
-	sed -i "s/@VERSION@/$$VERSION/g" '$(CURDIR)/debian/META.xml-light'
+	cp META.in $(DESTDIR_RUN)/$(OCAML_STDLIB_DIR)/xml-light/META; \
+	sed -i "s/@VERSION@/$$VERSION/g" '$(DESTDIR_RUN)/$(OCAML_STDLIB_DIR)/xml-light/META'
 
 	mv $(DESTDIR_DEV)/$(OCAML_STDLIB_DIR)/xml-light/xml-light.cma \
 		$(DESTDIR_RUN)/$(OCAML_STDLIB_DIR)/xml-light

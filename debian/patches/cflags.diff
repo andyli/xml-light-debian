@@ -1,0 +1,48 @@
+Do not use CFLAGS and LFLAGS as custom variable names since they
+are special variables that have default values in Debian.
+
+Index: xml-light/Makefile
+===================================================================
+--- xml-light.orig/Makefile
++++ xml-light/Makefile
+@@ -8,8 +8,8 @@ OCAMLFIND=ocamlfind
+ .SUFFIXES : .ml .mli .cmo .cmx .cmi .mll .mly
+ 
+ INSTALLDIR=`$(OCAMLC) -where`
+-CFLAGS=
+-LFLAGS= -a
++XML_LIGHT_OCAML_CFLAGS= $(OCAML_CFLAGS)
++XML_LIGHT_OCAML_LFLAGS= $(OCAML_LFLAGS) -a
+ LIBS=
+ 
+ NATDYNLINK := $(shell if [ -f `ocamlc -where`/dynlink.cmxa ]; then echo YES; else echo NO; fi)
+@@ -54,10 +54,10 @@ test_opt.exe: xml-light.cmxa
+ 	$(OCAMLOPT) xml-light.cmxa test.ml -o test_opt.exe
+ 
+ xml-light.cma: xml_parser.cmo xml_lexer.cmo dtd.cmo xmlParser.cmo xml.cmo 
+-	$(OCAMLC) -o xml-light.cma $(LFLAGS) $(LIBS) xml_parser.cmo xml_lexer.cmo dtd.cmo xmlParser.cmo xml.cmo
++	$(OCAMLC) -o xml-light.cma $(XML_LIGHT_OCAML_LFLAGS) $(LIBS) xml_parser.cmo xml_lexer.cmo dtd.cmo xmlParser.cmo xml.cmo
+ 
+ xml-light.cmxa: xml_parser.cmx xml_lexer.cmx dtd.cmx xmlParser.cmx xml.cmx 
+-	$(OCAMLOPT) -o xml-light.cmxa $(LFLAGS) $(LIBS) xml_parser.cmx xml_lexer.cmx dtd.cmx xmlParser.cmx xml.cmx
++	$(OCAMLOPT) -o xml-light.cmxa $(XML_LIGHT_OCAML_LFLAGS) $(LIBS) xml_parser.cmx xml_lexer.cmx dtd.cmx xmlParser.cmx xml.cmx
+ 
+ xml-light.cmxs: xml-light.cmxa
+ 	$(OCAMLOPT) -shared -linkall -I . -o xml-light.cmxs xml-light.cmxa
+@@ -99,13 +99,13 @@ clean:
+ 
+ # SUFFIXES
+ .ml.cmo:
+-	$(OCAMLC) $(CFLAGS) -c $<
++	$(OCAMLC) $(XML_LIGHT_OCAML_CFLAGS) -c $<
+ 
+ .ml.cmx:
+-	$(OCAMLOPT) $(CFLAGS) -c $<
++	$(OCAMLOPT) $(XML_LIGHT_OCAML_CFLAGS) -c $<
+ 
+ .mli.cmi:
+-	$(OCAMLC) $(CFLAGS) $<
++	$(OCAMLC) $(XML_LIGHT_OCAML_CFLAGS) $<
+ 
+ .mll.ml:
+ 	ocamllex $<

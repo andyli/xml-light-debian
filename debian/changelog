@@ -1,3 +1,20 @@
+xml-light (2.4-1) unstable; urgency=low
+
+  * Team upload
+  * New upstream version.
+    - Removed 01_installopt.diff, 02_cmi_depends.diff, 04_dtd_trace.diff,
+      05_cmxs_plugin.diff, and 06_CVE-2012-3514, which are all applied in
+      upstream.
+    - Updated 03_cflags.diff.
+    - Updated rules to work with upstream Makefile changes.
+  * Reference new upstream repository.
+    - update d/watch, d/control
+  * Use secure uri for d/control Vcs-* fields.
+  * Bump Standards-Version to 4.0.0 (no changes).
+  * Bump d/compat to 9 (no changes).
+
+ -- Andy Li <andy@onthewings.net>  Thu, 06 Jul 2017 10:01:34 +0800
+
 xml-light (2.2-17) unstable; urgency=low
 
   * Team upload

@@ -7,12 +7,12 @@ Uploaders:
 Build-Depends:
  cdbs (>= 0.4.23-1.1),
  ocaml-nox (>= 4),
- debhelper (>= 7.0.50~),
+ debhelper (>= 9),
  dh-ocaml (>= 0.9)
-Standards-Version: 3.9.2
-Vcs-Git: git://anonscm.debian.org/pkg-ocaml-maint/packages/xml-light.git
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-ocaml-maint/packages/xml-light.git
-Homepage: http://tech.motion-twin.com/xmllight.html
+Standards-Version: 4.0.0
+Vcs-Git: https://anonscm.debian.org/git/pkg-ocaml-maint/packages/xml-light.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ocaml-maint/packages/xml-light.git
+Homepage: https://github.com/ncannasse/xml-light
 
 Package: libxml-light-ocaml-dev
 Architecture: any
@@ -27,9 +27,6 @@ Description: mininal XML parser and printer for OCaml (development package)
  into OCaml data structures and printing it back to a XML document.
  .
  It also supports DTD.
- .
- You can find more information about xml-light at
- http://tech.motion-twin.com/xmllight.html
 
 Package: libxml-light-ocaml
 Architecture: any
@@ -48,6 +45,3 @@ Description: mininal XML parser and printer for OCaml (runtime package)
  into OCaml data structures and printing it back to a XML document.
  .
  It also supports DTD.
- .
- You can find more information about xml-light at
- http://tech.motion-twin.com/xmllight.html
